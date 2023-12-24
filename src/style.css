@@ -1,0 +1,203 @@
+:root {
+  --tme-selected: #1eab8d;
+  --tme-selected-lt: #22b88e;
+}
+
+.caption {
+  font: 16px sans-serif;
+}
+
+.caption_lt {
+  font: 10px sans-serif;
+}
+.caption_hv {
+  font: bold 18px sans-serif;
+}
+
+body {
+  /*font: 14px 'Century Gothic', Futura, sans-serif;
+  margin: 20px;*/
+
+  margin: 0;
+  padding: 0;
+  background: #eee1bd;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #151412;
+}
+
+main {
+  margin: 24px;
+}
+
+@media (min-width: 400px) {
+  main {
+    /*margin: 24px;*/
+    /* tiny css projects ch2 */
+    display: grid;
+    /*grid-template-columns: repeat(2, minmax(auto, 1fr)) 150px;*/
+    grid-template-columns: 125px 350px auto;
+    grid-template-areas:
+      'header  header  header'
+      'content content author'
+      'content content aside '
+      'plays graphics aside '
+      /*'plays      .    aside '*/
+      'footer  footer  footer';
+    gap: 10px;
+  }
+}
+
+/* tiny css projects ch2 2.7 removing debugging styles
+main > * {
+  border: solid 1px #bfbfbf;
+  padding: 12px;
+}
+ */
+
+main > *,
+section {
+  display: flow-root;
+}
+p,
+ul {
+  line-height: 1.5;
+}
+article p span {
+  display: block;
+}
+article p span:last-of-type,
+article p span:nth-last-child(2) {
+  text-indent: 16px;
+}
+
+/* tiny css projects ch2 */
+header {
+  grid-area: header;
+}
+article {
+  grid-area: content;
+}
+aside {
+  grid-area: aside;
+}
+.author-details {
+  grid-area: author;
+}
+.plays {
+  grid-area: plays;
+}
+footer {
+  grid-area: footer;
+}
+.graphics {
+  grid-area: graphics;
+}
+
+.tabbar {
+  display: flex;
+  flex: row wrap;
+  float: left;
+}
+
+.tab {
+  display: inline=block;
+}
+
+/* tiny css projects ch3 */
+rect:nth-child(1) {
+  fill: #1a9f8c;
+}
+rect:nth-child(2) {
+  fill: #1eab8d;
+}
+rect:nth-child(3) {
+  fill: #20b38e;
+}
+rect:nth-child(4) {
+  fill: #22b78d;
+}
+rect:nth-child(5) {
+  fill: #22b88e;
+}
+rect:nth-child(6) {
+  fill: #21b48d;
+}
+rect:nth-child(7) {
+  fill: #1eaf8e;
+}
+rect:nth-child(8) {
+  fill: #1ca48d;
+}
+rect:nth-child(9) {
+  fill: #17968b;
+}
+rect:nth-child(10) {
+  fill: #128688;
+}
+rect:nth-child(11) {
+  fill: #128688;
+}
+
+h1 {
+  font-family: Lato;
+  color: crimson;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  /*float: left; */
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: 1px;
+  margin-top: -3px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.small-heading {
+  color: darkblue;
+  text-transform: uppercase;
+}
+
+#quote {
+  background-color: aquamarine;
+  color: green;
+  padding: 10px;
+}
